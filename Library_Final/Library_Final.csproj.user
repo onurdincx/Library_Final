@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AdminLogin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel_AddBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel_AddMember.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel_GiveDepositBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel_ListBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel_ListDepositBooks.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel_ListMembers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AdminPanel_ReturnDepositBook.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Register.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TeacherStudent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AdminLogin.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel_AddBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel_AddMember.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel_GiveDepositBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel_ListBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel_ListDepositBooks.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel_ListMembers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AdminPanel_ReturnDepositBook.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Register.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TeacherStudent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

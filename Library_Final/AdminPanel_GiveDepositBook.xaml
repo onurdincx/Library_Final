@@ -1,0 +1,104 @@
+﻿<Window x:Class="Library_Final.AdminPanel_GiveDepositBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Final"
+        mc:Ignorable="d"
+        Title="AdminPanel_GiveDepositBook" Height="459" Width="1030" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen" FontFamily="Segoe UI Black" FontSize="16">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF00A2FF"/>
+            <GradientStop Color="White" Offset="1"/>
+            <GradientStop Color="#FF789E42" Offset="0.642"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <DataGrid x:Name="DataGridViewDepositBook" Margin="315,29,10,165" FontSize="14"/>
+        <GroupBox x:Name="group_MemberInfo" Header="Member Info:" Margin="148,10,732,277" BorderBrush="Red">
+            <StackPanel Height="156">
+                <TextBox x:Name="txt_MemberName" TextWrapping="Wrap" Width="120" TextChanged="txt_MemberName_TextChanged"/>
+                <TextBox x:Name="txt_MemberSurname" TextWrapping="Wrap" Width="120"/>
+                <TextBox x:Name="txt_MemberSchoolNumber" TextWrapping="Wrap" Width="120" TextChanged="txt_MemberSchoolNumber_TextChanged"/>
+                <TextBox x:Name="txt_MemberMail" TextWrapping="Wrap" Width="120"/>
+                <ComboBox x:Name="combobox_MemberType" Width="120">
+                    <ComboBoxItem Content="Student"/>
+                    <ComboBoxItem Content="Teacher"/>
+                    <ComboBoxItem Content="Admin"/>
+                </ComboBox>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="group_BookInfo" Header="Book Info:" Margin="148,230,732,56" Cursor="" BorderBrush="Red">
+            <StackPanel Height="149" Margin="0,0,-2,0">
+                <TextBox x:Name="txt_BookName" TextWrapping="Wrap" Width="120" TextChanged="txt_BookName_TextChanged"/>
+                <TextBox x:Name="txt_BookPage" TextWrapping="Wrap" Width="120"/>
+                <ComboBox x:Name="combobox_BookCategory" Width="120">
+                    <ComboBoxItem Content="Story"/>
+                    <ComboBoxItem Content="Poetry"/>
+                    <ComboBoxItem Content="Novel"/>
+                    <ComboBoxItem Content="Horror"/>
+                </ComboBox>
+                <TextBox x:Name="txt_BookAuthor" TextWrapping="Wrap" Width="120"/>
+                <TextBox x:Name="txt_BookYear" TextWrapping="Wrap" Width="120"/>
+                <TextBox x:Name="txt_BookPiece" TextWrapping="Wrap" Width="120" Text="1" TextAlignment="Center"/>
+
+            </StackPanel>
+        </GroupBox>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="64,31,0,0" VerticalAlignment="Top"/>
+        <Label Content="Mail:" HorizontalAlignment="Left" Margin="65,98,0,0" VerticalAlignment="Top"/>
+        <Label Content="Member Type:" HorizontalAlignment="Left" Margin="27,120,0,0" VerticalAlignment="Top"/>
+        <Label Content="School Number:" HorizontalAlignment="Left" Margin="12,74,0,0" VerticalAlignment="Top"/>
+        <Label Content="Surname:" HorizontalAlignment="Left" Margin="64,51,0,0" VerticalAlignment="Top"/>
+        <Label Content="Book Name:" HorizontalAlignment="Left" Margin="45,250,0,0" VerticalAlignment="Top"/>
+        <Label Content="Year:" HorizontalAlignment="Left" Margin="64,350,0,0" VerticalAlignment="Top"/>
+        <Label Content="Author:" HorizontalAlignment="Left" Margin="64,324,0,0" VerticalAlignment="Top"/>
+        <Label Content="How many:" HorizontalAlignment="Left" Margin="49,372,0,0" VerticalAlignment="Top"/>
+        <Label Content="Category:" HorizontalAlignment="Left" Margin="64,296,0,0" VerticalAlignment="Top"/>
+        <Label Content="Page:" HorizontalAlignment="Left" Margin="64,272,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="picker_DeliveryDate" HorizontalAlignment="Left" Margin="434,362,0,0" VerticalAlignment="Top" />
+        <DatePicker x:Name="picker_ReturnDate" HorizontalAlignment="Left" Margin="437,316,0,0" VerticalAlignment="Top"/>
+        <Label Content="Delivery Date:" HorizontalAlignment="Left" Margin="310,314,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.565"/>
+        <Label Content="Return Date:" HorizontalAlignment="Left" Margin="310,360,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Add_DepositBook" Content="ADD" HorizontalAlignment="Left" Margin="610,316,0,0" VerticalAlignment="Top" Height="50" Width="104" Click="btn_Add_DepositBook_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF74FF00"/>
+                    <GradientStop Color="#FF74FF00" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.524"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_Lend_DepositBook" Content="LEND" HorizontalAlignment="Left" Margin="758,315,0,0" VerticalAlignment="Top" Height="50" Width="104" Click="btn_Lend_DepositBook_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0023FF"/>
+                    <GradientStop Color="#FF0023FF" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.543"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btn_Cancel_DepositBook" Content="CANCEL" HorizontalAlignment="Left" Margin="900,315,0,0" VerticalAlignment="Top" Height="50" Width="104" Foreground="White" Click="btn_Cancel_DepositBook_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="Red" Offset="0.54"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Registered Books:" HorizontalAlignment="Left" Margin="326,0,0,0" VerticalAlignment="Top" Background="Red"/>
+        <Label Content="Total Books:" HorizontalAlignment="Left" Margin="624,0,0,0" VerticalAlignment="Top" Background="Red"/>
+        <TextBox x:Name="label_books_2" HorizontalAlignment="Left" Margin="733,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" Height="29" Background="Red" TextAlignment="Center"/>
+        <TextBlock x:Name="label_RegisteredBooks_2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="29" Width="29" Background="Red" TextAlignment="Center" Margin="479,0,0,0"/>
+        <Button x:Name="btn_delete_DepositBook_Admin" Content="DELETE" HorizontalAlignment="Left" Margin="610,388,0,0" VerticalAlignment="Top" Height="51" Width="104" Click="btn_delete_DepositBook_Admin_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.569"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

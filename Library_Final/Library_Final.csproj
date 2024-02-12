@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="admin_panel.webp" />
+    <None Remove="ana.png" />
+    <None Remove="cancel.png" />
+    <None Remove="DINCSOFTWARE_free-file %281%29.png" />
+    <None Remove="DINCSOFTWARE_free-file %282%29.png" />
+    <None Remove="DINCSOFTWARE_free-file %283%29.png" />
+    <None Remove="information.jpg" />
+    <None Remove="raf.png" />
+    <None Remove="register_login.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.13.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="admin_panel.webp" />
+    <Resource Include="ana.png" />
+    <Resource Include="cancel.png" />
+    <Resource Include="DINCSOFTWARE_free-file (1).png" />
+    <Resource Include="DINCSOFTWARE_free-file (2).png" />
+    <Resource Include="DINCSOFTWARE_free-file (3).png" />
+    <Resource Include="information.jpg" />
+    <Resource Include="raf.png" />
+    <Resource Include="register_login.jpg" />
+  </ItemGroup>
+
+</Project>

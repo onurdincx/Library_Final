@@ -1,0 +1,43 @@
+﻿<Window x:Class="Library_Final.AdminPanel_ListDepositBooks"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Final"
+        mc:Ignorable="d"
+        Title="AdminPanel_ListDepositBooks" Height="453" Width="927" ResizeMode="NoResize" WindowStyle="None" FontFamily="Segoe UI Black" FontSize="14" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF00F3FF" Offset="0.003"/>
+            <GradientStop Color="#FF3AFF00" Offset="1"/>
+            <GradientStop Color="#FF00FFAE" Offset="0.447"/>
+            <GradientStop Color="#FF3AFF00" Offset="0.898"/>
+            <GradientStop Color="#FF3AFF00" Offset="0.725"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <DataGrid x:Name="DataGridViewDepositBooks" Margin="10,10,10,75"/>
+        <Label Content="Filter:" HorizontalAlignment="Left" Margin="10,383,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <ComboBox x:Name="combobox_FilterDepositBooks_Admin" Margin="89,394,718,0" VerticalAlignment="Top" SelectionChanged="combobox_FilterDepositBooks_Admin_SelectionChanged" >
+            <ComboBoxItem Content="All Books"/>
+            <ComboBoxItem Content="Deadline Books"/>
+            <ComboBoxItem Content="No-Deadline Books"/>
+        </ComboBox>
+        <Button x:Name="btn_Cancel" Content="CANCEL" HorizontalAlignment="Left" Margin="725,395,0,0" VerticalAlignment="Top" Height="48" Width="120" FontSize="24" Foreground="Black" Click="btn_Cancel_Click">
+            <Button.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.BorderBrush>
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                    <GradientStop Color="#FFFFB900" Offset="0.559"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

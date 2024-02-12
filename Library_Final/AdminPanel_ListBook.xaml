@@ -1,0 +1,57 @@
+﻿<Window x:Class="Library_Final.AdminPanel_ListBook"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Final"
+        mc:Ignorable="d"
+        Title="AdminPanel_ListBook" Height="467" Width="988" ResizeMode="NoResize" WindowStyle="None" FontFamily="Segoe UI Black" FontSize="16" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF00F3FF"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <TextBox x:Name="txt_BookName_Admin" HorizontalAlignment="Left" Margin="131,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.275,-0.344" Height="28" TextChanged="txt_BookName_Admin_TextChanged"/>
+        <TextBox x:Name="txt_BookPage_Admin" HorizontalAlignment="Left" Margin="131,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="28"/>
+        <TextBox x:Name="txt_BookAuthor_Admin" HorizontalAlignment="Left" Margin="131,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="28"/>
+        <TextBox x:Name="txt_BookYear_Admin" HorizontalAlignment="Left" Margin="131,267,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="28"/>
+        <TextBox x:Name="txt_BookStock_Admin" HorizontalAlignment="Left" Margin="131,313,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="138" Height="28"/>
+        <Label Content="Page:" HorizontalAlignment="Left" Margin="29,120,0,0" VerticalAlignment="Top" Height="37" Width="62"/>
+        <Label Content="Category:" HorizontalAlignment="Left" Margin="29,167,0,0" VerticalAlignment="Top" Height="37" Width="100"/>
+        <Label Content="Author:" HorizontalAlignment="Left" Margin="29,218,0,0" VerticalAlignment="Top" Height="37" Width="82"/>
+        <Label Content="Stock:" HorizontalAlignment="Left" Margin="29,304,0,0" VerticalAlignment="Top" Height="37" Width="68"/>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="29,77,0,0" VerticalAlignment="Top" Height="37" Width="71"/>
+        <Label Content="Year:" HorizontalAlignment="Left" Margin="29,258,0,0" VerticalAlignment="Top" Height="37" Width="58"/>
+        <ComboBox x:Name="combobox_BookCategory_Admin" HorizontalAlignment="Left" Margin="134,172,0,0" VerticalAlignment="Top" Width="139" Height="32">
+            <ComboBoxItem Content="Story"/>
+            <ComboBoxItem Content="Novel"/>
+            <ComboBoxItem Content="Horror"/>
+            <ComboBoxItem Content="Poetry"/>
+        </ComboBox>
+
+
+        <Button x:Name="btn_UpdateBook_Admin" Content="UPDATE" HorizontalAlignment="Left" Margin="29,361,0,0" VerticalAlignment="Top" Height="55" Width="109" Foreground="Black" FontSize="18" Click="btn_UpdateBook_Admin_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF00FF2E"/>
+                    <GradientStop Color="#FF00FF2E" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.527"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <DataGrid x:Name="DataGridViewBookList" Margin="323,77,10,109" FontSize="14"/>
+        <Label Content="Search Book Name:" HorizontalAlignment="Left" Margin="510,394,0,0" VerticalAlignment="Top" FontSize="22" FontFamily="Unispace"/>
+        <TextBox x:Name="Search_BookName_Admin" HorizontalAlignment="Left" Margin="754,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="224" FontSize="22" FontFamily="Unispace" TextChanged="Search_BookName_Admin_TextChanged"/>
+        <Button x:Name="btn_CloseListBook_Admin" Content="CLOSE" HorizontalAlignment="Left" Margin="167,361,0,0" VerticalAlignment="Top" Height="55" Width="124" FontFamily="Segoe UI Black" FontSize="24" Foreground="White" Click="btn_CloseListBook_Admin_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF131313"/>
+                    <GradientStop Color="#FF060606" Offset="1"/>
+                    <GradientStop Color="Red" Offset="0.508"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

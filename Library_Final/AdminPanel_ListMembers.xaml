@@ -1,0 +1,67 @@
+﻿<Window x:Class="Library_Final.AdminPanel_ListMembers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Final"
+        mc:Ignorable="d"
+        Title="AdminPanel_ListMembers" Height="471" Width="965" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FF00E8FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DataGridView1" Margin="426,10,0,114" Background="#FFF0F0F0"/>
+        <Label HorizontalAlignment="Left" Margin="61,48,0,0" VerticalAlignment="Top" Height="26" Width="72" FontFamily="Arial Black" Background="Red" Foreground="White" Content="Name:" FontSize="16"/>
+        <Label HorizontalAlignment="Left" Margin="26,98,0,0" VerticalAlignment="Top" Height="30" Width="107" FontFamily="Arial Black" Background="Red" Foreground="White" Content="SurName:" FontSize="16"/>
+        <Label HorizontalAlignment="Left" Margin="49,201,0,0" VerticalAlignment="Top" Height="26" Width="74" FontFamily="Arial Black" Background="Red" Foreground="White" Content="E-Mail:" FontSize="16"/>
+        <Label HorizontalAlignment="Left" Margin="18,253,0,0" VerticalAlignment="Top" Height="26" Width="115" FontFamily="Arial Black" Background="Red" Foreground="White" Content="Password:" FontSize="16"/>
+        <Label HorizontalAlignment="Left" Margin="4,147,0,0" VerticalAlignment="Top" Height="25" Width="155" FontFamily="Arial Black" Background="Red" Foreground="White" Content="School Number:" FontSize="16"/>
+        <TextBox x:Name="txt_Name_Admin" HorizontalAlignment="Left" Margin="176,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" FontSize="16" Height="26" TextChanged="txt_Name_Admin_TextChanged"/>
+        <TextBox x:Name="txt_SurName_Admin" HorizontalAlignment="Left" Margin="176,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" FontSize="16" Height="26"/>
+        <TextBox x:Name="txt_Number_Admin" HorizontalAlignment="Left" Margin="176,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="112" FontSize="16" Height="25" TextChanged="txt_Number_Admin_TextChanged"/>
+        <TextBox x:Name="txt_Mail_Admin" HorizontalAlignment="Left" Margin="154,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="267" FontSize="16" Height="26"/>
+        <TextBox x:Name="txt_Password_Admin" HorizontalAlignment="Left" Margin="177,253,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="111" FontSize="16" Height="26"/>
+        <Label HorizontalAlignment="Left" Margin="4,298,0,0" VerticalAlignment="Top" Height="29" Width="144" FontFamily="Arial Black" Background="Red" Foreground="White" Content="Member Type:" FontSize="16"/>
+        <ComboBox x:Name="combobox_MemberType_Admin" HorizontalAlignment="Left" Margin="177,297,0,0" VerticalAlignment="Top" Width="111" FontSize="16" Height="30">
+            <ComboBoxItem Content="Student" Foreground="Black" Background="#FF46FF00"/>
+            <ComboBoxItem Content="Teacher" Foreground="White" Background="#FF000CFF"/>
+            <ComboBoxItem Background="Red" Content="Admin" Foreground="White"/>
+        </ComboBox>
+        <Button x:Name="btn_Update_Admin" Content="UPDATE" HorizontalAlignment="Left" Margin="18,355,0,0" VerticalAlignment="Top" Height="56" Width="161" FontFamily="Segoe UI Black" FontSize="24" Click="btn_Update_Admin_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF3AFF00"/>
+                    <GradientStop Color="#FF3AFF00" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.604"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="CLOSE" HorizontalAlignment="Left" Margin="216,355,0,0" VerticalAlignment="Top" Height="56" Width="169" FontFamily="Segoe UI Black" Foreground="White" Click="Button_Click" FontSize="16">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF131313"/>
+                    <GradientStop Color="#FF060606" Offset="1"/>
+                    <GradientStop Color="Red" Offset="0.508"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label x:Name="labe_Search" HorizontalAlignment="Left" Margin="503,386,0,0" VerticalAlignment="Top" Height="25" Width="223" FontFamily="Arial Black" Background="Red" Foreground="White" Content="School Number Search:" FontSize="16"/>
+        <TextBox x:Name="txt_SearchNumber_Admin" HorizontalAlignment="Left" Margin="752,386,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="179" FontSize="16" Height="25" TextChanged="txt_SearchNumber_Admin_TextChanged"/>
+        <Button x:Name="btn_Delete_Admin" Content="DELETE" HorizontalAlignment="Left" Margin="139,421,0,0" VerticalAlignment="Top" Height="45" Width="148" FontSize="24" FontFamily="Segoe UI Black" Click="btn_Delete_Admin_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.556"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>
